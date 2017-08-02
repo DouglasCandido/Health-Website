@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+body{
+	
+    background: url('../_img/fundo_site.jpg');
+	
+}
+
+#divPrincipal {
+
+	width: 600px;
+	border: 10px solid #333333;
+	padding: 10px;
+	margin: 0 auto;
+	background-color: white;
+
+}
+
+.divPostagem {
+	
+	padding: 5px;
+	background: white;
+	border-bottom: 10px solid black;
+	
+}
+
+.divPostagem p{
+	
+	text-align: justify;
+	line-height: 25px;
+	text-indent: 30px;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	color: black;
+	
+}
+
+.divPostagem h2 {
+	
+    background: #207cca;
+    text-align: center;
+    font-size: 18pt;
+    margin-top: 0px;
+    margin-left: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+
+}
+
+#divPrincipal #divTopo {
+	
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+#divPrincipal #divTopo h1 {
+	
+	border-radius: 0px 100px;
+	background: #80baff;
+    text-align: center;
+    font-size: 30pt;
+    margin-top: 0px;
+    margin-left: 10px;
+    font-family: 'Shadows Into Light', cursive;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+	color: black;
+	
+}
+
+
+

@@ -1,0 +1,35 @@
+img.foto_exercicio{
+    width: 575px; /* Largura do item*/
+    height: 250px;/* Altura do item */
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    float: left; /* Direciona o item, nesse caso, para esquerda */
+}
+
+ul li{
+    list-style-type: square; /* Altera o tipo de marcação da lista*/
+    padding-bottom: 20px;
+}
+
+section#corpoExercicio{ /* container/secion corpo do site */
+    background: #ffffff;
+    float: left;
+    margin-top: -100px;
+}
+
+table{
+    border: 1px #4682B4 solid; /* Define a dimensão da borda, a cor e o tipo da borda */
+    border-spacing: 0px; /* Define a dimensão de espaçamento da borda*/
+    margin-bottom: 20px; /* para ficar mais distante do rodape */
+}
+
+table th {
+    color: #686868;
+    background-color: #B0E0E6;
+}
+table tr {
+    border-bottom: 1px #686868 solid; /* Define a dimensão da borda inferior, a cor e o tipo */
+    color: #2989d8;
+    background-color: #dddddd;
+}

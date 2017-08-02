@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="../_css/Container_Interface.css">
+    <link rel="stylesheet" type="text/css" href="../_css/sobre.css">
+    <script type="text/javascript" src="../_js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../_js/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="../_js/Slide_Efeito.js"></script>
+    <script>
+        function mudaFoto(foto){ // Função que recebe um parâmetro (foto).
+            document.getElementById("icone").src = foto; to) // Irá substituir por um novo valor que será passado por parâmetro (foto).
+			}
+    </script>
+    <meta charset="UTF-8">
+    <title>Saúde Porque Sim!</title>
+</head>
+<body>
+<div id="interface">
+    <!-- INICIO CABECALHO DO SITE -->
+    <header id="cabecalho">
+        <img id="logomarca" src="../_img/logo.png" alt="Logomarca" title="Saúde Porque Sim!">
+        <nav id="menu-topo"> <!-- Container nav, ou seja, menu de navegação -->
+            <ul id="menu">
+                <li class="sub-menu" onmouseover="mudaFoto('../_img/home-menu.png')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="../index.html"> Início </a></li>
+                <li id="qualidade-de-vida">
+                    <a href="#"> Qualidade de Vida </a>
+                    <ul id="sub-menu">
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Alimentacao-menu.png')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="Alimentacao_Saudavel.html"> Alimentação Saudável </a></li>
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Esportes-menu.png')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="Exercicios_Saudaveis.html"> Exercicios Saudáveis </a></li>
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/acupuntura-menu.png')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="Acupuntura.html"> Acupuntura </a></li>
+                    </ul>
+                </li>
+                <li>
+					<a href="#" onmouseover="mudaFoto('../_img/vida.jpg')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"> Sua vida </a>
+					<ul id="sub-menu-sua-vida">
+						<li class="sub-menu"  onmouseover="mudaFoto('../_img/imagem_imc_.gif')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="IMC.html"> IMC </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postar.png')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="Postar.html"> Postar </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postagens.png')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="Postagens.php"> Postagens </a></li>
+					</ul>
+				</li>
+
+                <li onmouseover="mudaFoto('../_img/Corpo-humano-menu.png')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="Corpo_Humano.html"> O Corpo Humano </a></li>
+                <li onmouseover="mudaFoto('../_img/Sobre-menu.png')" onmouseout="mudaFoto('../_img/Sobre-menu.png')"><a href="#"> Sobre </a></li>
+            </ul>
+        </nav>
+        <img id="icone" src="../_img/Sobre-menu.png">
+    </header>
+    <!-- FIM CABECALHO DO SITE -->
+
+    <!-- INICIO CORPO PRINICPAL -->
+    <section id="corpo">
+        <h1>Saiba Detalhes do Site e Conheça Nossos Desenvolvedores!</h1>
+        <h2>O Site</h2>
+        <p>O site Saúde Porque Sim, traz a você dicas de saúde, boa alimentação, esportes, e novos tratamentos de saúde para um bom desenvolvimento muscular. Você conhecerá as principais partes do corpo humano e alguns disturbios que afetam a saúde. Nosso objetivo é propagar a saúde, e todas as maneiras de se obte-la. Temos o intuito de proporcionar uma melhor qualidade de vida para todos.</p>
+        <h2>Autores</h2>
+        <table border="1">
+            <tr><td rowspan="5"><img src="../_img/foto_gerson.jpg" class="foto-sobre" alt="Foto Gesson" title="Gesson Brener"></td></tr>
+            <tr class="coluna"><td>Nome: Gesson Brener Ferreira da Silva</td></tr>
+            <tr class="coluna"><td>Idade: 16</td></tr>
+            <tr class="coluna"><td>Matricula: 20131104010334</td></tr>
+            <tr class="coluna"><td>Cidade: Caicó/RN</td></tr>
+            <tr><td rowspan="5"><img src="../_img/foto_jeanderson.jpg" class="foto-sobre" alt="Foto Jeanderson" title="Jeanderson Medeiros"></td></tr>
+            <tr class="coluna"><td>Nome: Jeanderson Medeiros da Silva</td></tr>
+            <tr class="coluna"><td>Idade: 17</td></tr>
+            <tr class="coluna"><td>Matricula: 20131104010415</td></tr>
+            <tr class="coluna"><td>Cidade: Cruzeta/RN</td></tr>
+            <tr><td rowspan="5"><img src="../_img/foto_felipe.jpg" class="foto-sobre" alt="Foto Felipe" title="Felipe Medeiros"></td></tr>
+            <tr class="coluna"><td>Nome: Felipe de Medeiros Araújo</td></tr>
+            <tr class="coluna"><td>Idade: 17</td></tr>
+            <tr class="coluna"><td>Matricula: 20131104010407</td></tr>
+            <tr class="coluna"><td>Cidade: Cruzeta/RN</td></tr>
+			    <tr><td rowspan="5"><img src="../_img/foto_douglas.jpg" class="foto-sobre" alt="Foto Douglas" title="Douglas Cândido"></td></tr>
+			<tr class="coluna"><td>Nome: Douglas Mateus Soares Cândido da Silva</td></tr>
+            <tr class="coluna"><td>Idade: 18</td></tr>
+            <tr class="coluna"><td>Matricula: 20131104010300</td></tr>
+            <tr class="coluna"><td>Cidade: Caicó/RN</td></tr>
+       
+        </table>
+     </section>
+    <!-- FIM CORPO PRINCIPAL -->
+
+    <!-- INICIO RODAPE -->
+    <footer> <!-- Rodape -->
+        Copyright &copy; 2015 | Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+    </footer>
+    <!-- FIM RODAPE -->
+</div>
+</body>
+</html>

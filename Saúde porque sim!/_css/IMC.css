@@ -1,0 +1,30 @@
+#lateral {
+     padding-right: 0px;
+     padding-top: 30px;
+ }
+img.foto-imc{
+    width: 630px;
+    height: 250px;
+}
+table tr{
+    border: 3px #4ac3ff solid;
+}
+table td{
+    padding-left: 20px;
+
+}
+
+table tr td{
+    padding: 5px;
+}
+
+input {
+    box-shadow: 0px 0px 10px gray;
+}
+button{
+    color: white;
+    font-size: 15px;
+    border-radius: 0px 10px 0px 10px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
+    box-shadow: 0px 0px 10px rgba(1,1,1,1);
+}

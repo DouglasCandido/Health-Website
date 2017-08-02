@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+body{
+    background: url('../_img/fundo_site.jpg');
+}
+
+div#interface{
+    width: 900px; /* tamanho do container interface dentro do site */
+    background-color: #ffffff; /* fundo do container interface brnaco */
+    margin: 0px auto 0px auto; /*LOCALIZA??O CENTRALIZADA. cima, direitoa, baixo, esquerda. auto ? para ser tamanho automatico */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* (Desloc. Lateral, Desloc. Vertical, Espalhamento da Sobra, Cor). cria uma sombra em volta do objeto */
+    padding: 10px 10px 10px 10px; /* Configura Espa?o Interno do Objeto. J? que os valores sao todos igual(10px) poderia somente fazer "padding: 10px;" */
+} 
+
+header#cabecalho img#icone { /* configura somente o imagem icone em header->cabecalho */
+    position: relative; /* para ficar realitico com o cabecalho */
+    float: right;
+    width: 120px;
+    padding-top: 20px;
+    top: -150px; /* localizacao na altura dos icone de menu */
+    height: 120px;
+}
+
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /* cria uma linha de 1px de largura, cor cinza, solida(pode ser pontilhada, tracejada) */
+    height: 150px; /* Altura do cabecalho */
+    /* varios planos de fundos para dar um realce de mistura e para funcionar em diversos navegadores o moz e o webkit */
+    background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* (Desloc. Lateral, Desloc. Vertical, Espalhamento da Sobra, Cor). cria uma sombra em volta do objeto */
+}
+
+img#logomarca{ /* COnfigura��o para a logomarca do site */
+    width: 200px;
+}
+
+img.foto-lateral{ /* comfigura��es para as imagens da lateral, que tenha a classe foto-lateral */
+    width: 200px;
+
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+iframe.video{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+img.foto-noticia{ /* comfigura��o para as fotos das noticias do site */
+    width: 300px;
+    float: left;
+    padding: 20px;
+}
+
+section#corpo{ /* container/secion corpo do site */
+    background: #ffffff;
+    float: left;
+    margin-top: 20px;
+    width: 70%;
+    border-right: 1px #cecece solid;
+}
+
+aside#lateral{ /* container lateral do site */
+    background: #80baff;
+    float: left;
+    width: 28%;
+    margin-left: 10px;
+    margin-top: -120px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* sombra */
+}
+
+h1{ /* H1 que servira de padrao para todo o site */
+    background: #80baff;
+
+    text-align: center;
+    font-size: 20pt;
+    margin-top: 0px;
+    margin-left: 10px;
+    border-radius: 0px 100px;
+    font-family: 'Shadows Into Light', cursive;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+}
+
+P.publicacao{
+    text-align: justify; /* todos os textos juntificados */
+    text-indent: 50px; /* paragrafo de 50px */
+    padding-left: 20px;
+    padding-right: 25px;
+    font-family: Arial, sans-serif;
+
+}
+
+P.oque-e{
+    text-align: justify; /* todos os textos juntificados */
+    text-indent: 50px; /* paragrafo de 50px */
+    padding-left: 20px;
+    padding-right: 25px;
+    font-family: Arial, sans-serif;
+    padding-top: 30px;
+}
+
+p.lateral{
+    text-align: justify;
+    padding: 15px;
+}
+
+footer{ /* configura��es do rodap� */
+    clear: both;
+    border-top: 1px #cecece solid;
+    padding: 20px;
+    text-align: center;
+}
+
+nav#menu-topo ul{ /* altera dentro do NAV com ID menu-topo, somente a UL com ID menu */
+    position: absolute; /* fixo na tela, para quando omer, nao mover o menu todo */
+    margin-top: -130px;
+    margin-left: 200px;
+}
+
+nav#menu-topo ul li,a{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 15pt;
+}
+
+nav#menu-topo ul li ul{
+    display: none;
+}
+
+nav#menu-topo ul li:hover ul{ /* exibe o sub menu, quando passar o mouse por ciam do LI principal */
+    display: block;
+    position: absolute; /* lista fixa */
+    margin-top: 0px;
+    margin-left: 50px;
+}
+
+nav#menu-topo ul li:hover ul li{ /* exibe os LI do sub menu em bloco quando o mouse passar por cima do LI principal */
+    display: block;
+    font-size: 10pt;
+}
+
+h2.lateral{ /* Este H2 pega as caacteristicas do H2 dsa postagens, mas sobescreve o tamanho que se altera na lateral */
+    width: auto;
+}
+
+ul#sub-menu li a{ /* altera somente o A que estiver dentro do LI que esta dentro do UL com id Sub-menu */
+    font-size: 12pt;
+}
+
+ul#sub-menu-sua-vida li a{ /* altera somente o A que estiver dentro do LI que esta dentro do UL com id Sub-menu-sua-vida */
+    font-size: 12pt;
+    padding-left: 155px;
+}
+
+div#contato{
+    margin-left: 20px;
+}
+
+a.fonte{
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+}
+
+button {
+	color: white;
+    font-size: 15px;
+    border-radius: 0px 10px 0px 10px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
+    box-shadow: 0px 0px 10px rgba(1,1,1,1);
+}
+
+input {
+	box-shadow: 0px 0px 10px gray;
+}
+
+textarea {	
+	box-shadow: 0px 0px 10px gray;
+}

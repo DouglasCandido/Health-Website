@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="_css/Container_Interface.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="_js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="_js/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="_js/Slide_Efeito.js"></script>
+    <script>
+	
+        function mudaFoto(foto){ // Funçao que recebe um parâmetro (foto).
+		
+            document.getElementById("icone").src = foto; // Irá substituir por um novo valor que será passado por parâmetro (foto).
+			
+        }
+
+		function verificarFormulario(parametro) { // Funçao que verifica se os campos do formulário estao preenchidos.
+		
+			if (parametro.txtNome.value == "" || parametro.txtMensagem == "") {
+			
+				alert ("Campos nao preenchidos.");
+				
+			}
+				
+			else if (parametro.txtNome != "" && parametro.txtMensagem != ""){
+			
+				alert ("Obrigado " + nome.value + "!\n" + "Sua mensagem nos ajudará a melhorar.");
+			
+			}
+			
+		}
+			
+		function mensagemParaUsuario () { // Funçao que exibe um alerta destinado ao usuário
+		
+			alert("É necessário você instalar o Wamp Server para fazer o site funcionar 100%, pois o site está utilizando PHP e MySQL.");
+		
+		}
+		
+		$(document).ready(function(){ // Funçao responsável por ocultar/exibir o parágrafo referente à "O que é Saúde?".
+		$("#pSaude").fadeOut(); // Inicialmente o parágrafo estará oculto.
+		$("#ocultarPSaude").click(function(){
+        $("#pSaude").fadeOut()
+		});
+		$("#exibirPSaude").click(function(){
+        $("#pSaude").fadeIn();
+		});
+		});
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Saúde Porque Sim!</title>
+</head>
+<body onload="mensagemParaUsuario();">
+<div id="interface">
+<!-- INICIO CABECALHO DO SITE -->
+        <header id="cabecalho">
+            <img id="logomarca" src="_img/logo.png" alt="Logomarca" title="Saúde Porque Sim!">
+            <nav id="menu-topo"> <!-- Container nav, ou seja, menu de navegaçao -->
+                <ul id="menu">
+                    <li><a href="index.html"> Início </a></li>
+                    <li id="qualidade-de-vida">
+                        <a href="#"> Qualidade de Vida </a>
+                        <ul id="sub-menu">
+                            <li class="sub-menu" onmouseover="mudaFoto('_img/Alimentacao-menu.png')" onmouseout="mudaFoto('_img/home-menu.png')"><a href="_paginas/Alimentacao_Saudavel.html"> Alimentaçao Saudável </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                            <li class="sub-menu" onmouseover="mudaFoto('_img/Esportes-menu.png')" onmouseout="mudaFoto('_img/home-menu.png')"><a href="_paginas/Exercicios_Saudaveis.html"> Exercicios Saudáveis </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                            <li class="sub-menu" onmouseover="mudaFoto('_img/acupuntura-menu.png')" onmouseout="mudaFoto('_img/home-menu.png')"><a href="_paginas/Acupuntura.html"> Acupuntura </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                        </ul>
+                    </li>
+                    <li>
+						<a href="#" onmouseover="mudaFoto('_img/vida.jpg')" onmouseout="mudaFoto('_img/Alimentacao-menu.png')"> Sua vida </a>
+						<ul id="sub-menu-sua-vida">
+							<li class="sub-menu"  onmouseover="mudaFoto('_img/imagem_imc_.gif')" onmouseout="mudaFoto('_img/home-menu.png')"><a href="_paginas/IMC.html"> IMC </a></li>
+							<li class="sub-menu" onmouseover="mudaFoto('_img/postar.png')" onmouseout="mudaFoto('_img/home-menu.png')"><a href="_paginas/Postar.html"> Postar </a></li>
+							<li class="sub-menu" onmouseover="mudaFoto('_img/postagens.png')" onmouseout="mudaFoto('_img/home-menu.png')"><a href="_paginas/Postagens.php"> Postagens </a></li>
+						</ul>
+					</li>
+                    <li onmouseover="mudaFoto('_img/Corpo-humano-menu.png')" onmouseout="mudaFoto('_img/home-menu.png')"><a href="_paginas/Corpo_Humano.html"> O Corpo Humano </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                    <li onmouseover="mudaFoto('_img/Sobre-menu.png')" onmouseout="mudaFoto('_img/home-menu.png')"><a href="_paginas/Sobre.html"> Sobre </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                </ul>
+            </nav>
+            <img id="icone" src="_img/home-menu.png"> <!-- Foto do menu do cabecalho -->
+        </header>
+<!-- FIM CABECALHO DO SITE -->
+
+
+<!-- INICIO CORPO PRINICPAL -->
+        <section id="corpo">
+
+            <!-- INICIO NOTICIA ANOREXIA-->
+
+            <h1 id="anorexia">Anorexia, O que é e Seus Sintomas</h1> <!-- O ID servira para quando o usuario clicar no menu "Ultimas Postagens", e sera encaminhado para esta cordenada deste ID -->
+            <h2 class="hDois">O Que é?</h2> 
+            <img class="foto-noticia" src="_img/Anorexia.jpg"/> 
+            <p class="oque-e">A anorexia é um distúrbio alimentar que provoca uma perda de peso acima do que é considerado saudável para a idade e altura. Pessoas com anorexia podem ter um medo intenso de ganhar peso, mesmo quando estao abaixo do peso normal. Elas podem abusar de dietas ou exercícios, ou usar outros métodos para emagrecer. </p>
+            <h2 class="hDois">Sintomas</h2>
+
+            <p class="publicacao">Os principais sintomas apresentados por uma pessoa com anorexia sao:<p>
+
+            <ul>
+                <li>Sentir medo enorme de engordar ou ficar acima do peso ideal, mesmo quando a pessoa está abaixo do peso normal</li>
+                <li>Recusar-se a manter o peso que é considerado normal ou aceitável para sua idade e altura (geralmente, pessoas com anorexia estao no mínimo 15% abaixo do peso normal)</li>
+                <li>Ter uma imagem corporal muito distorcida, ser muito focada no peso ou na forma corporal e se recusar a admitir a gravidade da perda de peso</li>
+                <li>Nao menstruar por três ou mais ciclos.</li>
+            </ul>
+            <p class="publicacao">As pessoas com anorexia podem limitar gravemente a quantidade de comida que ingerem e depois provocar vômitos. Outros comportamentos incluem:</p>
+            <ul>
+                <li>Cortar a comida em pequenos pedaços ou movêlos no prato em vez de comêlos</li>
+                <li>Exercitar-se o tempo todo, mesmo quando o clima está ruim, a pessoa está machucada ou ocupada</li>
+                <li>Ir ao banheiro imediatamente após as refeiçoes</li>
+                <li>Recusar-se a comer perto de outras pessoas</li>
+                <li>Usar comprimidos para urinar (diuréticos), evacuar (enemas e laxantes) ou reduzir o apetite (comprimidos para perda de peso).</li>
+            </ul>
+            <p class="publicacao">Outros sintomas de anorexia podem incluir:</p>
+            <ul>
+                <li>Pele manchada ou amarelada, seca e coberta por pelos finos</li>
+                <li>Pensamento confuso ou lento, junto com memória ou julgamento deficientes</li>
+                <li>Depressao</li>
+                <li>Boca seca</li>
+                <li>Extrema sensibilidade ao frio (vestir várias camadas de roupas para ficar aquecido)</li>
+                <li>Perda de resistência óssea</li>
+                <li>Desgaste dos músculos e perda de gordura corporal.</li>
+            </ul>
+            Fonte: <a class="fonte" href="http://www.minhavida.com.br/saude/temas/anorexia" target="_blank">Site Minha Vida</a>
+            <!-- FIM NOTICIA ANOREXIA -->
+
+            <!-- INICIO NOTICIA BULIMIA -->
+            <h1 id="bulimia">Bulimia, O que é e Seus Sintomas</h1><!-- O ID servira para quando o usuario clicar no menu "Ultimas Postagens", e sera encaminhado para esta cordenada deste ID -->
+
+
+
+
+            <h2 class="hDois">O Que é?</h2>
+            <img class="foto-noticia" src="_img/Bulimia.png"/>
+            <p class="oque-e">A bulimia é um distúrbio alimentar no qual uma pessoa oscila entre a ingestao exagerada de alimentos, com um sentimento de perda de controle sobre a alimentaçao, e episódios de vômitos ou abusos de laxantes para impedir o ganho de peso. Pessoas com bulimia estao sempre preocupadas com a aparência, principalmente com o peso. </p>
+            <h2 class="hDois">Sintomas</h2>
+
+
+            <p class="publicacao">Os sintomas mais comuns da bulimia sao:</p>
+            <ul>
+                <li>Preocupaçao excessiva com o peso e com a silhueta</li>
+                <li>Ter medo de ganhar peso</li>
+                <li>Perder o controle sobre o que come</li>
+                <li>Comer em excesso até sentir desconforto ou dor</li>
+                <li>Ir ao banheiro imediatamente após as refeiçoes</li>
+                <li>Forçar o vômito após comer</li>
+                <li>Fazer uso de diuréticos e laxantes após comer</li>
+                <li>Usar suplementos diários de perda de peso.</li>
+            </ul>
+            Fonte: <a class="fonte" href="http://www.minhavida.com.br/saude/temas/bulimia" target="_blank">Site Minha Vida</a>
+            <!-- FIM NOTICIA BULIMIA -->
+
+            <!-- INICIO NOTICIA VIGOREXIA -->
+            <h1 id="vigorexia">Vigorexia, O que é e Seus Sintomas</h1><!-- O ID servira para quando o usuario clicar no menu "Ultimas Postagens", e sera encaminhado para esta cordenada deste ID -->
+            <h2 class="hDois">O Que é?</h2>
+            <img class="foto-noticia" src="_img/vigorexia.jpg"/>
+            <p class="oque-e">A vigorexia, transtorno dismórfico muscular ou Síndrome de Adonis, é uma doença psicológica caracterizada por uma insatisfaçao constante com o corpo, que afeta principalmente os homens, levando-os à prática exaustiva de exercícios físicos.</p>
+            <h2 class="hDois">Sintomas</h2>
+            <p class="publicacao">O principal sintoma da vigorexia é o fato de o indivíduo estar em ótima forma física e continuar achando que seu corpo é inadequado, por ser muito fraco. Outros sintomas sao:</p>
+            <ul>
+                <li>Dor muscular persistente por todo o corpo</li>
+                <li>Cansaço ao extremo</li>
+                <li>Irritabilidade</li>
+                <li>Depressao</li>
+                <li>Anorexia/ Dieta muito restritiva</li>
+                <li>Insônia</li>
+                <li>Aumento da frequência cardíaca ao repouso</li>
+                <li>Menor desempenho durante o contato íntimo</li>
+                <li>Sentimento de inferioridade</li>
+            </ul>
+            Fonte: <a class="fonte" href="http://www.tuasaude.com/vigorexia/" target="_blank">Site tua saúde</a>
+            <!-- FIM NOTICIA VIGOREXIA -->
+
+        </section>
+<!-- FIM CORPO PRINCIPAL -->
+
+<!-- INICIO CORPO LATERAL -->
+        <aside id="lateral"> <!--Lateral -->
+
+            <h2 class="lateral">O Que é Saúde?</h2> 
+            <img class="foto-lateral" src="_img/saude.jpg"> <br /> <br />
+			&nbsp; <button id="ocultarPSaude" title="Ocultar parágrafo"> Ocultar </button> <button autofocus id="exibirPSaude" title="Exibir parágrafo"> Exibir </button>
+            <p class="lateral" id="pSaude">Durante muito tempo, a saúde foi entendida simplesmente como o estado de ausência de doença. Considerada insatisfatória, esta definiçao de saúde foi substituída por outra, que engloba bem-estar físico, mental e social. Embora mais abrangente, o novo conceito nao está livre de dificuldades, sobretudo quando se leva em conta a legitimidade dos movimentos que defendem a `saúde para todos'. "A partir daí, a sociedade literalmente bate à porta das instituiçoes acadêmicas e científicas que supostamente deveriam saber o que é, como se mede e como se promove `essa tal de saúde'", problematiza o autor, que é professor de Epidemiologia da Universidade Federal da Bahia (Ufba). Ao contrário do que possa parecer à primeira vista, a obra demonstra que a definiçao de saúde nao é trivial e constitui grande lacuna epistemológica no campo da saúde coletiva. Os capítulos retomam os debates filosófico, teórico, metodológico e pragmático sobre saúde, doença e noçoes correlatas, como vida e qualidade de vida, morte, sofrimento, cuidado e iniquidades.</p>
+
+            <h2 class="lateral"> Video Motivacional </h2>
+            <iframe class="video" width="200" height="200" src="https://www.youtube.com/embed/lFNU9l9gC2w" frameborder="0" allowfullscreen></iframe>
+
+            <h2 class="lateral">Fale Conosco</h2>
+            <div id="contato">
+                <form name="formFaleConosco" method="post" onsubmit="verificarFormulario(formFaleConosco);">
+
+					Nome: <br /><input name="txtNome" id="idNome" placeholder="Seu Nome" type="text"> <br/>
+					Mensagem: <textarea name="txtMensagem" id="idMensagem" cols="24" rows="5" placeholder="Sua Mensagem"></textarea><br/> <!-- Para textos grandes -->
+
+					<button type="submit"> Enviar </button>
+							
+                </form>
+            </div>
+        </aside>
+<!-- FIM CORPO LATERAL -->
+
+<!-- INICIO RODAPE -->
+        <footer> <!-- Rodape -->
+            Copyright &copy; 2015 | Instit

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<style> /* CSS referente somente ao body desta pagina */
+</style>
+<link rel="stylesheet" type="text/css" href="../_css/Container_Interface.css">
+<link rel="stylesheet" type="text/css" href="../_css/Acupuntura.css">
+<script type="text/javascript" src="../_js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../_js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="../_js/Slide_Efeito.js"></script>
+<script>
+    function mudaFoto(foto){ // Funcao recebe um parametro, que eh foto
+        document.getElementById("icone").src = foto; /* ira substituir por um novo larlor que sera passado porparametro (foto) */
+    }
+</script>
+<meta charset="UTF-8">
+<title>Saúde Porque Sim!</title>
+</head>
+<body>
+<div id="interface">
+    <!-- INICIO CABECALHO DO SITE -->
+    <header id="cabecalho">
+        <img id="logomarca" src="../_img/logo.png" alt="Logomarca" title="Saúde Porque Sim!">
+        <nav id="menu-topo"> <!-- Container nav, ou seja, menu de navegação -->
+            <ul id="menu">
+                <li onmouseover="mudaFoto('../_img/home-menu.png')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="../index.html"> Início </a></li>
+                <li id="qualidade-de-vida">
+                    <a href="#"> Qualidade de Vida </a>
+                    <ul id="sub-menu">
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Alimentacao-menu.png')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="Alimentacao_Saudavel.html"> Alimentação Saudável </a></li>
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Esportes-menu.png')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="Exercicios_Saudaveis.html"> Exercicios Saudáveis </a></li>
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/acupuntura-menu.png')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="Acupuntura.html"> Acupuntura </a></li>
+                    </ul>
+                </li>
+
+                <li>
+					<a href="#" onmouseover="mudaFoto('../_img/vida.jpg')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"> Sua vida </a>
+					<ul id="sub-menu-sua-vida">
+						<li class="sub-menu"  onmouseover="mudaFoto('../_img/imagem_imc_.gif')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="IMC.html"> IMC </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postar.png')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="Postar.html"> Postar </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postagens.png')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="Postagens.php"> Postagens </a></li>
+					</ul>
+				</li>
+
+                <li onmouseover="mudaFoto('../_img/Corpo-humano-menu.png')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="Corpo_Humano.html"> O Corpo Humano </a></li>
+                <li onmouseover="mudaFoto('../_img/Sobre-menu.png')" onmouseout="mudaFoto('../_img/acupuntura-menu.png')"><a href="Sobre.html"> Sobre </a></li>
+            </ul>
+        </nav>
+        <img id="icone" src="../_img/acupuntura-menu.png">
+    </header>
+    <!-- FIM CABECALHO DO SITE -->
+
+    <!-- INICIO NOTICIA ACUPUNTURA -->
+
+    <h1 id="acupuntura">Acupuntura</h1> <!-- O ID servira para quando o usuario clicar no menu "Ultimas Postagens", e sera encaminhado para esta cordenada deste ID -->
+
+
+    <h2>O Que é Acupuntura?</h2>
+    <img class="foto-noticia" src="../_img/acupuntura1.jpg"/>
+    <p class="publicacao">A acupuntura é um método terapêutico com origem na Medicina Tradicional Chinesa, que consiste na estimulação de pontos específicos
+        através de agulhas. Essa estimulação tem a capacidade de regular o fluxo energético que é responsável pela fisiologia do corpo humano. A palavra
+        "acupuntura" vem do latim - acus significa agulha e punctura significa puncionar. </p>
+
+    <h2>Efeitos da Acupuntura</h2>
+    <p class="publicacao">As endorfinas desempenham um importante papel no funcionamento do sistema hormonal, além de ser várias vezes mais potente que
+        a morfina, daí a indicação e eficiência da acupuntura no tratamento de dores nas costas, artrites, infertilidade, etc. Alguns dos efeitos
+        fisiológicos observados num tratamento contínuo com acupuntura são a redução de inflamações, o alívio da dor e espasmos musculares, além do
+        aumento do número de células de defesa.<p>
+
+    <h2>A prática da Acupuntura dói?</h2>
+    <img class="foto-noticia" src="../_img/agulha.jpg"/>
+    <p class="publicacao">É bem comum as pessoas se perguntarem se acupuntura dói, mas saiba que quando o terapeuta insere a agulha na pele, o cliente
+        pode ter uma leve “sensação de picada” ou “sensação de choque”, mas nada que gere desconforto ou impeça a prática da técnica.<p>
+
+    <h2>Para que serve a Acupuntura?</h2>
+    <p class="publicacao">Segundo a OMS (Organização Mundial da Saúde), a acupuntura serve como complemento para tratamentos da medicina tradicional e
+    inclusive, lista mais de 40 doenças em que há ótimos resultados com a utilização desta técnica, das quais podemos destacar:<p>
+    <ul>
+        <li>Recuperação de AVC</li>
+        <li>Depressão</li>
+        <li>Cólicas</li>
+        <li>Enxaqueca</li>
+        <li>Alergias</li>
+        <li>Artrite</li>
+        <li>TPM</li>
+        <li>Auxilia no emagrecimento</li>
+        <li>Dores nas costas</li>
+        <li>Dores musculares</li>
+    </ul>
+    Fonte: <a class="fonte" href="http://www.significados.com.br/acupuntura/" target="_blank">Site Significados</a>
+    <!-- FIM NOTICIA ACUPUNTURA -->
+
+    <!-- INICIO RODAPE -->
+    <footer> <!-- Rodape -->
+        Copyright &copy; 2015 | Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+    </footer>
+    <!-- FIM RODAPE -->
+
+</div>
+</body>
+</html>

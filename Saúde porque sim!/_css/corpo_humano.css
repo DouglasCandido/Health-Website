@@ -1,0 +1,13 @@
+section#corpo{
+    border: none; /* sobrescreve a section com ID corpo do CSS Container_Interface, e remove a borda que dividia a pagina */
+    width: 100%; /* ocupa todo o container corpo, pois ira sobescrever a a section do css Container_Interface */
+    margin-top: -80px; /* para aproximar o container mais do topo */
+}
+iframe{
+    border: none; /* tira as bordas do frame */
+    position: absolute;
+    padding-top: 3%;
+    padding-left: 10%;
+    width: 550px;
+    height: 300px;
+}

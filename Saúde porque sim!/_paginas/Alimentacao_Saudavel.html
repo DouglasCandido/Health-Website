@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="../_css/Alimentacao_e_Exercicios-Saudaveis.css">
+    <link rel="stylesheet" type="text/css" href="../_css/Container_Interface.css">
+    <script type="text/javascript" src="../_js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../_js/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="../_js/Slide_Efeito.js"></script>
+    <script>
+        function mudaFoto(foto){ // Função que recebe um parâmetro (foto).
+            document.getElementById("icone").src = foto; // Irá substituir por um novo valor que será passado por parâmetro (foto).
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Saúde Porque Sim! - Alimentação Saudavel</title>
+</head>
+<body>
+<div id="interface">
+    <!-- INICIO CABECALHO DO SITE -->
+    <header id="cabecalho">
+        <img id="logomarca" src="../_img/logo.png" alt="Logomarca" title="Saúde Porque Sim!">
+        <nav id="menu-topo"> <!-- Container nav, ou seja, menu de navegação -->
+            <ul id="menu">
+                <li onmouseover="mudaFoto('../_img/home-menu.png')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="../index.html"> Início </a></li>
+                <li id="qualidade-de-vida">
+                    <a href="#"> Qualidade de Vida </a>
+                    <ul id="sub-menu">
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Alimentacao-menu.png')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="Alimentacao_Saudavel.html"> Alimentação Saudável </a></li>
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Esportes-menu.png')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="Exercicios_Saudaveis.html"> Exercicios Saudáveis </a></li>
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/acupuntura-menu.png')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="Acupuntura.html"> Acupuntura </a></li>
+                    </ul>
+                </li>
+                <li>
+					<a href="#" onmouseover="mudaFoto('../_img/vida.jpg')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"> Sua vida </a>
+					<ul id="sub-menu-sua-vida">
+						<li class="sub-menu"  onmouseover="mudaFoto('../_img/imagem_imc_.gif')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="IMC.html"> IMC </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postar.png')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="Postar.html"> Postar </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postagens.png')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="Postagens.php"> Postagens </a></li>
+					</ul>
+				</li>
+
+                <li onmouseover="mudaFoto('../_img/Corpo-humano-menu.png')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="Corpo_Humano.html"> O Corpo Humano </a></li>
+                <li onmouseover="mudaFoto('../_img/Sobre-menu.png')" onmouseout="mudaFoto('../_img/Alimentacao-menu.png')"><a href="Sobre.html"> Sobre </a></li>
+            </ul>
+        </nav>
+        <img id="icone" src="../_img/Alimentacao-menu.png">
+    </header>
+    <!-- FIM CABECALHO DO SITE -->
+
+
+    <!-- INICIO CORPO PRINICPAL -->
+    <section id="corpoExercicio">
+            <h1>Alimentação: Cuidado diário!</h1>
+
+        <img class="foto_exercicio" src="../_img/alimentacao.jpg"/>
+
+        <h2 style="display: inline; ">Introdução </h2> </br> <!-- O display inline servira para trazer o texto para de lado da iamgen -->
+
+        <p class="publicacao"> A alimentação saudável é a alimentação ou nutrição na qual deve-se comer bem e de forma
+            equilibrada para que os adultos mantenham o peso ideal e as crianças se desenvolvam bem fisicamente , intelectualmente,
+            dependendo do hábito alimentar.
+
+            Adicionalmente, a alimentação saudável envolve a escolha de alimentos não somente para manter o peso ideal, mas também
+            para garantir uma saúde plena. As dietas são rotinas alimentares que buscam atingir um determinado objetivo, e nem sempre
+            vão ao encontro de conceito de alimentação saudável. Por exemplo, dietas restritivas, como a dieta do Dr. Atinas, não
+            preenchem os critérios de alimentação saudável.</p>
+
+
+
+        <h2 style="display: inline; ">Alimentação Saudável</h2> </br>
+
+        <p class="publicacao"> Alimentação saudável é uma dieta composta de proteínas, carboidratos, gorduras,
+            fibras, cálcio e outros minerais, como também rica em vitaminas.É uma dieta variada,possui todos os
+            tipos de alimentos, sem abusos e também sem exclusões.Essa dieta também constitui na variação dos tipos
+            de cereais, de carnes, de verduras, legumes e frutas, alternando as cores dos alimentos. As vitaminas e
+            minerais é que dão as diversas colorações aos alimentos.
+
+            Para ter uma alimentação saudável, é importante consumir diferentes tipos de alimentos e nutrientes; e a
+            soja e seus alimentos fonte proporcionam alguns desses nutrientes. A soja é um dos vegetais com maior valor
+            nutritivo devido a sua quantidade de proteínas – nutriente normalmente encontrado em alimentos de origem animal.</p>
+
+
+
+        <h2 style="display: inline">Princípios de uma alimentação saudável</h2>
+
+        <ul style="list-style-type: decimal; padding-bottom: 20px">
+            <li><b>Adequação:</b> A alimentação deve ser apropriada às diferentes fases e condições de vida, às atividades, às circunstâncias fisiológicas e de doenças.</li>
+
+            <li><b>Qualidade:</b> Deve conter variedade de alimentos que satisfaça todas as necessidades do corpo. Os alimentos devem ser nutritivos e não apenas conterem calorias vazias.</li>
+
+            <li> <b>Quantidade:</b> Deve ser suficiente para atender o organismo em todas as suas necessidades.</li>
+
+            <li><b>Harmonia:</b> É o equilíbrio entre os nutrientes, em relação á quantidade e qualidade.</li>
+
+            <li><b>Variedade:</b> Fornecer uma ampla seleção de alimentos diariamente, pois os alimentos são diferentes, apresentando diferentes nutrientes.</li>
+        </ul>
+            
+        <h1> Pirâmide Alimentar</h1>
+        
+        <img src="../_img/piramide.gif">
+        
+        <p class="publicacao">Cada parte da pirâmide representa um grupo de alimentos e o número de porções
+            recomendadas diariamente. Na alimentação diária devemos incluir sempre todos os grupos recomendados
+            para garantir os nutrientes que o nosso organismo necessita. Os alimentos que precisam ser consumidos
+            numa quantidade maior estão na base da pirâmide e os que precisam ser consumidos em menor quantidade
+            estão no topo da pirâmide.</p>
+        <p class="publicacao"> Número de porções diárias recomendadas, de acordo com a faixa etária, por grupo da pirâmide alimentar:</p>
+        <table align="center">
+            <tr>
+                <th>Nível na Pirâmide</th>
+                <th>Grupo Alimentar</th>
+                <th>Idade 6 a 11 meses</th>
+                <th>Idade de 1 a 3 anos</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Cereais, pães, tubérculos e raízes</td>
+                <td>3</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Verduras e legumes</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Frutas</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Leites, queijos e iorgutes</td>
+                <td>Leite Materno</td>
+                <td>3</td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Carnes e ovos</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Feijões</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Óleos e gorduras</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Açucar e doces</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+        </table>
+    Fonte: <a class="fonte" href="http://www.sonutricao.com.br/conteudo/alimentacao/" target="_blank">Site Só Nutrição</a>
+    </section>
+
+    <!-- INICIO RODAPE -->
+    <footer> <!-- Rodape -->
+        Copyright &copy; 2015 | Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+    </footer>
+    <!-- FIM RODAPE -->
+</div>
+</body>
+</html>

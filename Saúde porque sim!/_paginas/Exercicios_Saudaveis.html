@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="../_css/Alimentacao_e_Exercicios-Saudaveis.css">
+    <link rel="stylesheet" type="text/css" href="../_css/Container_Interface.css">
+    <script type="text/javascript" src="../_js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../_js/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="../_js/Slide_Efeito.js"></script>
+    <script>
+	
+        function mudaFoto(foto){ // Função que recebe um parâmetro (foto).
+		
+            document.getElementById("icone").src = foto; // Irá substituir por um novo valor que será passado por parâmetro (foto).
+			
+        }
+		
+		var imagens = new Array();
+		imagens[0] = "../_img/exercicio.jpg";
+		imagens[1] = "../_img/exercicio2.jpg";
+		imagens[2] = "../_img/exercicio3.jpg";
+		imagens[3] = "../_img/exercicio4.jpg";
+		imagens[4] = "../_img/exercicio5.jpg";
+		
+		var i = 0;
+		
+		function mudarImagem() { // Função responsável por fazer a troca entre as imagens armazenadas no array imagens.
+		
+			i++;
+			
+			if(i == imagens.length) { // Se o contador se igualar ao tamanho do vetor imagens, ele será zerado (para recomeçar).
+			
+				i = 0;
+			
+			}
+			
+			document.getElementById("imagensExercicios").src = imagens[i];
+			
+		}
+		
+		function mudarImagemAutomaticamente() { // Função responsável por alternar automaticamente entre as imagens dentro de um intervalo de 2 segundos.
+		
+			setInterval(mudarImagem, 2000); 
+		
+		}
+		
+    </script>
+    <meta charset="UTF-8">
+    <title>Saúde Porque Sim!</title>
+</head>
+<body onload="mudarImagemAutomaticamente();">
+<div id="interface">
+    <!-- INICIO CABECALHO DO SITE -->
+    <header id="cabecalho">
+        <img id="logomarca" src="../_img/logo.png" alt="Logomarca" title="Saúde Porque Sim!">
+        <nav id="menu-topo"> <!-- Container nav, ou seja, menu de navegação -->
+            <ul id="menu">
+                <li onmouseover="mudaFoto('../_img/home-menu.png')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="../index.html"> Início </a></li>
+                <li id="qualidade-de-vida">
+                    <a href="#"> Qualidade de Vida </a>
+                    <ul id="sub-menu">
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Alimentacao-menu.png')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="Alimentacao_Saudavel.html"> Alimentação Saudável </a></li>
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Esportes-menu.png')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="Exercicios_Saudaveis.html"> Exercicios Saudáveis </a></li>
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/acupuntura-menu.png')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="Acupuntura.html"> Acupuntura </a></li>
+                    </ul>
+                </li>
+                <li>
+					<a href="#" onmouseover="mudaFoto('../_img/vida.jpg')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"> Sua vida </a>
+					<ul id="sub-menu-sua-vida">
+						<li class="sub-menu"  onmouseover="mudaFoto('../_img/imagem_imc_.gif')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="IMC.html"> IMC </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postar.png')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="Postar.html"> Postar </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postagens.png')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="Postagens.php"> Postagens </a></li>
+					</ul>
+				</li>
+
+                <li onmouseover="mudaFoto('../_img/Corpo-humano-menu.png')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="Corpo_Humano.html"> O Corpo Humano </a></li>
+                <li onmouseover="mudaFoto('../_img/Sobre-menu.png')" onmouseout="mudaFoto('../_img/Esportes-menu.png')"><a href="Sobre.html"> Sobre </a></li>
+            </ul>
+        </nav>
+        <img id="icone" src="../_img/Esportes-menu.png">
+    </header>
+    <!-- FIM CABECALHO DO SITE -->
+
+
+    <!-- INICIO CORPO PRINICPAL -->
+    <section id="corpoExercicio">
+        <h1>Exercício físico: Uma Opção!</h1>
+
+        <img class="foto_exercicio" id="imagensExercicios" src=""/>
+
+        <h2 style="display: inline; ">Introdução</h2> </br>
+
+        <p class="publicacao"> Praticar exercícios físicos é algo que nem todo mundo curte fazer,
+            mas que de um modo ou de outro, os médicos sempre recomendam que pratiquemos. Todo mundo
+            sabe que há uma grande distância entre reconhecer a importância e praticá-los de verdade.
+            Assim, hoje vamos falar um pouco de atividades físicas que já são consideradas exercícios
+            físicos e qual a real importância delas para nosso corpo. Logicamente, antes de iniciar
+            qualquer atividade física, seu médico deverá ser consultado, pois ele solicitará exames que
+            comprovarão que seu corpo está pronto para elas.</p>
+
+
+
+        <h2 style="display: inline; ">O que é exercício físico? </h2> </br>
+
+        <p class="publicacao"> Basicamente, o exercício físico é uma seqüência sistematizada de movimentos
+            de diferentes segmentos corporais, executados de forma planejada e com um determinado objetivo
+            a ser atingido. Por exemplo: um passeio ao ar livre é considerado uma atividade física, enquanto
+            uma caminhada orientada é um exercício físico, já que possui um determinado planejamento, como a
+            intensidade, a duração e o objetivo, que pode ser a queima de gordura, simplesmente o condicionamento,
+            ou manter-se em movimento para evitar o sedentarismo.</p>
+
+
+
+        <h2 style="display: inline">Por que praticar exercícios físicos?</h2>
+
+        <ul class="listaExercicio">
+            <li>A prática de exercício ajuda a manter a força e elasticidade dos músculos, evita a obesidade e dá uma sensação de bem-estar.</li>
+
+            <li>À medida que a idade avança, os movimentos começam a ser mais lentos e o andar menos seguro. Se fizer exercício diariamente, passará a movimentar-se com maior rapidez e segurança.</li>
+
+            <li>O exercício físico também ajuda a prevenir algumas doenças (principalmente as do coração e dos vasos sangüíneos) e a diminuir a perda de cálcio dos ossos.</li>
+
+            <li>A mobilidade articular, está diretamente relacionada com a amplitude do movimento e a flexibilidade com sua qualidade.</li>
+
+            <li>A resistência está ligada á freqüência com que o idoso se dedica a ocupações ativas. A redução da mobilidade e da resistência, prejudica o desempenho de muitas atividades do dia a dia.</li>
+        </ul>
+
+
+    Fonte: <a class="fonte" href="http://corpoeestetica.com/exercicios-fisicos-entenda-por-que-sao-tao-importantes-pro-corpo/" target="_blank">Site Corpo e Estetica</a>
+
+    <!-- FIM CORPO PRINCIPAL-->
+    </section>
+
+    <!-- INICIO RODAPE -->
+    <footer> <!-- Rodape -->
+        Copyright &copy; 2015 | Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+    </footer>
+    <!-- FIM RODAPE -->
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="../_css/Container_Interface.css">
+    <link rel="stylesheet" type="text/css" href="../_css/IMC.css">
+    <script type="text/javascript" src="_js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="_js/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="_js/Slide_Efeito.js"></script>
+    <script>
+        function mudaFoto(foto){ // Função que recebe um parâmetro (foto).
+            document.getElementById("icone").src = foto; // Irá substituir por um novo valor que será passado por parâmetro (foto).
+        }
+        var nome;
+        var peso;
+        var altura;
+
+        function CalcIMC(nome, peso, altura){ // Função responsável por calcular o IMC (índice de massa corporal) do usuário.
+
+             if(altura.charAt(1) == ','){  // Caso o usuário digite uma vírgula, ela será substituida por um ponto (ex: 1,80m = 1.80m). O método charAt é responsável por indicar a posição da letra que será trocada.
+                altura = altura.replace("," , "."); // A nova altura será igual a antiga altura com o ponto ao invés de vírgula (graças ao método replace).
+            }
+
+            for (var i = 0; i<peso.length; i++){  // Caso o usuário digite uma vírgula, ela será substituida por um ponto (ex: 70,5Kg = 70.5Kg). 
+                if(peso.charAt(i) == ","){ // O método charAt é responsável por indicar a posição da letra que será trocada.
+                    peso = peso.replace(",", "."); // O novo peso será igual ao antigo peso com o ponto ao invés de vírgula (graças ao método replace).
+                }
+            }
+
+            peso = parseFloat(peso); // Converte-se o tipo da variável peso para float (number).
+            altura = parseFloat(altura); // Converte-se o tipo da variável altura para float (number).
+            var imc = peso/(altura*altura); // Fórmula para calcular o IMC.
+            imc = parseFloat(imc.toFixed(2)); // Converte a variável imc para o tipo string, especificando 2 casas decimais.
+
+            if(imc<18.5){ // Esse if será responsável por dar o alerta ao usuário (alertas diferentes para valores de imc diferentes).
+                alert("Nome: " + nome + "\n" +"Índice de Massa Corporal: " + imc + "\n" + "Grau: Abaixo do peso!" );
+            }else if(imc>= 18.5 && imc<=24.9) {
+                alert("Nome: " + nome + "\n" + "Índice de Massa Corporal: " + imc + "\n" + "Grau: Peso Ideal! Parabéns!");
+            }else if(imc>= 25.0 && imc<=29.9){
+                alert("Nome:" + nome + "\n" + "Índice de Massa Corporal: " + imc + "\n" + "Grau: Levemente Acima do Peso!" );
+            }else if(imc>= 30.0 && imc<=34.9){
+                alert("Nome:" + nome + "\n" + "Índice de Massa Corporal: " + imc + "\n" + "Grau: Obesidade Grau I!" );
+            }else if(imc>= 35.0 && imc<=39.9){
+                alert("Nome:" + nome + "\n" + "Índice de Massa Corporal: " + imc + "\n" + "Grau: Obesidade Grau II - Severa!" );
+            }else if(imc>= 40.0){
+                alert("Nome:" + nome + "\n" + "Índice de Massa Corporal: " + imc + "\n" + "Grau: Obesidade Grau III - Mórbida!" );
+            }
+
+        }
+
+
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Saúde Porque Sim!</title>
+</head>
+<body>
+<div id="interface">
+    <!-- INICIO CABECALHO DO SITE -->
+    <header id="cabecalho">
+        <img id="logomarca" src="../_img/logo.png" alt="Logomarca" title="Saúde Porque Sim!">
+        <nav id="menu-topo"> <!-- Container nav, ou seja, menu de navegação -->
+            <ul id="menu">
+                <li onmouseover="mudaFoto('../_img/home-menu.png')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="index.html"> Início </a></li>
+                <li id="qualidade-de-vida">
+                    <a href="#"> Qualidade de Vida </a>
+                    <ul id="sub-menu">
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Alimentacao-menu.png')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="../_paginas/Alimentacao_Saudavel.html"> Alimentação Saudável </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/Esportes-menu.png')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="../_paginas/Exercicios_Saudaveis.html"> Exercicios Saudáveis </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                        <li class="sub-menu" onmouseover="mudaFoto('../_img/acupuntura-menu.png')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="../_paginas/Acupuntura.html"> Acupuntura </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                    </ul>
+                </li>
+                <li>
+					<a href="#" onmouseover="mudaFoto('../_img/vida.jpg')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"> Sua vida </a>
+					<ul id="sub-menu-sua-vida">
+						<li class="sub-menu"  onmouseover="mudaFoto('../_img/imagem_imc_.gif')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="IMC.html"> IMC </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postar.png')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="Postar.html"> Postar </a></li>
+						<li class="sub-menu" onmouseover="mudaFoto('../_img/postagens.png')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="Postagens.php"> Postagens </a></li>
+					</ul>
+				</li>
+                <li onmouseover="mudaFoto('../_img/Corpo-humano-menu.png')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="../_paginas/Corpo_Humano.html"> O Corpo Humano </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+                <li onmouseover="mudaFoto('../_img/Sobre-menu.png')" onmouseout="mudaFoto('../_img/imagem_imc_.gif')"><a href="../_paginas/Sobre.html"> Sobre </a></li> <!-- Quando ele passar o mouse sobre o LI, aparecera uma imagem, quando tirar o mouse de cima do LI, aparecera outra -->
+            </ul>
+        </nav>
+        <img id="icone" src="../_img/imagem_imc_.gif"> <!-- Foto do menu do cabecalho --> 
+    </header>
+    <!-- FIM CABECALHO DO SITE -->
+
+
+    <!-- INICIO CORPO PRINICPAL -->
+    <section id="corpo">
+
+        <h1> IMC - Índice de Massa Corporal</h1>
+        <h2>O Que é?</h2>
+        <p class="oque-e">
+            O Índice de Massa Corporal é uma medida utilizada para medir a obesidade adotada pela Organização Mundial de Saúde (OMS). É o padrão internacional para avaliar o grau de obesidade.
+
+            O sobrepeso e a obesidade, indicados pelo IMC, são fatores de risco para doenças tais como a hipertensão arterial, a doença arterial coronariana e o diabetes melittus, além de outras patologias consideradas de alto risco para a Saúde Pública.
+        </p>
+        <img class="foto-imc" src="../_img/imc-image.png"/>
+        <p class="oque-e">
+            Hoje em dia, o IMC é utilizado como forma de comparar a saúde de populações, ou até mesmo definir prescrição de medicações.
+
+            Os valores de IMC são independentes de idade e sexo. Apesar disso, o IMC pode não corresponder ao mesmo grau de gordura em diferentes populações devido às diferentes proporções do corpo.
+
+            Riscos à saúde associados ao aumento do IMC devem ser constantemente observados e interpretados, já que podem ser diferentes em cada população.
+        </p>
+    <form name="fomulario_IMC" method="post">
+        <h1> Calcule seu IMC AGORA!</h1>
+        <table>
+		
+            <tr>
+                <td>Nome:  </td>
+                <td><input required name="nome" type="text"  placeholder="Ex: João" value="" size="15"> </td>
+
+            </tr>
+            <tr>
+                <td>Peso:  </td>
+                <td> <input required name="peso" value="" placeholder="Ex: 50.0" type="text" size="15"> Kg</td>
+            </tr>
+
+            <tr>
+                <td>Altura:  </td>
+                <td> <input required name="altura" value="" placeholder="Ex: 1.40" type="text" size="15"> m</td>
+            </tr>
+
+            <tr>
+                <td> </td>
+                <td>  <button required onclick="CalcIMC(form.nome.value, form.peso.value, form.altura.value)"> Calcular </button></td>
+            </tr>
+
+        </table>
+
+    </form>
+
+        Fonte: <a class="fonte" href="http://www.calculoimc.com.br/o-que-e-imc/" target="_blank">Site Cálculo IMC</a>
+
+    </section>
+    <!-- FIM CORPO PRINCIPAL -->
+
+   <!-- INICIO CORPO LATERAL -->
+
+    <!-- FIM CORPO LATERAL -->
+
+    <!-- INICIO RODAPE -->
+    <footer> <!-- Rodape -->
+        Copyright &copy; 2015 | Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+    </footer>
+    <!-- FIM RODAPE -->
+</div>
+</body>
+</html>
