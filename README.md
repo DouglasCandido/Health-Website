@@ -1,2 +1,2 @@
 # Health-Website
-A simply Health website made with JavaScript and PHP. 
+A simple website that provides information about health.
